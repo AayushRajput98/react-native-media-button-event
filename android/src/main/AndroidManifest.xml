@@ -1,0 +1,18 @@
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.mediabuttonhandling.reactnative">
+
+    <application>
+        <receiver android:name="androidx.media.session.MediaButtonReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+        <service android:name=".MediaService" android:exported="true">
+            <intent-filter android:priority="1000">
+                <action android:name="android.media.browse.MediaBrowserService" />
+            </intent-filter>
+        </service>
+    </application>
+</manifest>
+  
